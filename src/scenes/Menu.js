@@ -15,7 +15,7 @@ class Menu extends Phaser.Scene {
         this.load.audio('expert', './assets/Expert.wav');
         this.load.audio('music', './assets/plasterbrain.wav');
         
-        this.load.image('starfield', './assets/ocean.png');
+        this.load.image('starfield', './assets/Ocean.png');
       }
 
     create() {
