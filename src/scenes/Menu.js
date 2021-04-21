@@ -48,7 +48,7 @@ class Menu extends Phaser.Scene {
        
       // show menu text
       this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'Neptune\'s Bounty ', menuConfig).setOrigin(0.5);
-      this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, ' (F) to cast', menuConfig).setOrigin(0.5);
+      this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, ' (↑) to cast', menuConfig).setOrigin(0.5);
       this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move your net &', menuConfig).setOrigin(0.5);
       menuConfig.backgroundColor = '#00FF00';
       menuConfig.color = '#000';
