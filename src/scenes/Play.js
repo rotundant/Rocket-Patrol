@@ -9,7 +9,7 @@ class Play extends Phaser.Scene {
     preload() {
         // load images/tile sprites
         this.load.image('rocket', './assets/Net.png');
-        this.load.image('spaceship', './assets/spaceship.png');
+        this.load.image('spaceship', './assets/bird.png');
         this.load.image('starfield', './assets/ocean.png');
         this.load.image('bluefish', './assets/bluefish.png');
         this.load.image('yellowfish', './assets/yellowfish.png');
@@ -39,7 +39,7 @@ class Play extends Phaser.Scene {
     this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'bluefish', 0, 20).setOrigin(0,0);
     this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'yellowfish', 0, 10).setOrigin(0,0);
 
-    this.bird01 = new Bird(this,game.config.width + borderUISize*6, borderUISize*4, 'spaceship', 0, 60).setOrigin(0, 0);
+    this.bird01 = new Bird(this,game.config.width + borderUISize*6, borderUISize, 'spaceship', 0, 60).setOrigin(0, 0);
 
     // define keys
     keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
@@ -133,6 +133,10 @@ class Play extends Phaser.Scene {
         if (this.checkCollision(this.p1Rocket, this.ship01)) {
             this.p1Rocket.reset();
             this.shipExplode(this.ship01);
+        }
+        if (this.checkCollision(this.p1Rocket, this.bird01)) {
+            this.p1Rocket.reset();
+            this.shipExplode(this.bird01);
         }
     }
 
